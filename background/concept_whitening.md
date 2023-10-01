@@ -37,3 +37,10 @@ Possible experiments:
 
 Define superset/subset labels, e.g. "person", "woman", and observe
 what happens.
+
+The authors only give pre-built checkpoits with a small number of
+concepts (three and seven) and do not discuss system behaviour as the
+number of CW concepts grows.
+
+It would be interesting to observe what happens as the taxonomy grows
+larger and deeper.
