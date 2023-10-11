@@ -32,7 +32,14 @@ Paper: winters-etal:2022
 
 Code: https://github.com/ML-KULeuven/deepstochlog
 
-*DeepStochLog* is an optimized version of DeepProbLog, based on stochastic definite clause grammars. It scales well (better than its predecessor for sure) and more accurate results on various neural symbolic computation tasks.
+*DeepStochLog* is an optimized version of DeepProbLog based on stochastic definite clause grammars. It scales well 
+(certainly better than its predecessor) and demonstrates good accuracy in various neural symbolic computation tasks. 
+DeepStochLog utilizes resolution to derive a goal G from a sequence T, resulting in an SLD resolution tree. However, 
+since SLD resolution involves proving many intermediate goals multiple times, this framework applies SLG resolution and
+tabling to prevent redundant proofs and the recomputation of components within the corresponding AND/OR circuit. This 
+is the primary reason why DeepStochLog scales better than DeepProbLog. Additionally, DeepStochLog is based on 
+computationally more efficient random walk semantics, as opposed to the possible world semantics utilized by DeepProbLog
+and NeurASP.
 
 
 ## NeurASP
