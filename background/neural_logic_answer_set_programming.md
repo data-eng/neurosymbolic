@@ -48,7 +48,15 @@ Paper: yang-etal:2020
 
 Code: https://github.com/azreasoners/NeurASP
 
-*NeurASP* integrates answer set programs with neural networks. Same as the aforementioned works, it uses the neural network output as the probability distribution over atomic facts in answer set programs in order to combine sub-symbolic and symbolic computation.
+*NeurASP* integrates answer set programs with neural networks, similar to the approaches mentioned earlier. 
+It employs the neural network's output as the probability distribution over atomic facts in answer set programs, 
+enabling the fusion of sub-symbolic and symbolic computation.
+
+One distinction from DeepProbLog and DeepStochLog is its utilization of the (clingo) ASP solver instead of circuit 
+construction. NeurASP calculates the probability of a set of observations and utilizes this information to compute 
+and update the neural network's parameters, maximizing the log-likelihood of observations within the extended NeurASP 
+program. In certain use cases, it proves to be less time-consuming during training compared to DeepProbLog, as 
+generating the SDD is more time-consuming than enumerating stable models, which NeurASP efficiently handles.
 
 ## SLASH
 
